@@ -1,0 +1,89 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "form-builder-block/textarea",
+  "version": "1.0.0",
+  "title": "Textarea",
+  "category": "widgets",
+  "icon": "text",
+  "description": "A textarea field for form building with validation and styling options.",
+  "keywords": [
+    "textarea",
+    "text",
+    "form",
+    "field",
+    "multiline"
+  ],
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "Textarea Label"
+    },
+    "placeholder": {
+      "type": "string",
+      "default": ""
+    },
+    "helpText": {
+      "type": "string",
+      "default": ""
+    },
+    "required": {
+      "type": "boolean",
+      "default": false
+    },
+    "fieldId": {
+      "type": "string",
+      "default": ""
+    },
+    "rows": {
+      "type": "number",
+      "default": 4
+    },
+    "minLength": {
+      "type": "number",
+      "default": 0
+    },
+    "maxLength": {
+      "type": "number",
+      "default": 1000
+    },
+    "pattern": {
+      "type": "string",
+      "default": ""
+    },
+    "validMessage": {
+      "type": "string",
+      "default": ""
+    },
+    "invalidMessage": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "example": {
+    "attributes": {
+      "label": "Comments",
+      "placeholder": "Enter your comments here...",
+      "helpText": "Please provide detailed feedback.",
+      "rows": 6
+    }
+  },
+  "parent": [
+    "form-builder-block/wrapper"
+  ],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "className": true,
+    "customClassName": true,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "form-builder-block",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "file:./view.js"
+}
