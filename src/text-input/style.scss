@@ -1,0 +1,52 @@
+@use "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+.text-input-container {
+
+	@apply space-y-4;
+}
+
+.text-input-field-wrapper {
+
+	@apply space-y-2;
+}
+
+.text-input-label {
+
+	@apply block mb-2 text-sm font-medium dark:text-white;
+}
+
+.text-input-required {
+
+	@apply ml-1 text-red-500;
+}
+
+.text-input-relative {
+
+	@apply relative;
+}
+
+.text-input-field {
+
+	@apply py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600;
+}
+
+.text-input-icon {
+
+	@apply absolute inset-y-0 flex items-center pointer-events-none end-0 pe-3;
+}
+
+.text-input-help {
+
+	@apply mt-2 text-sm text-gray-500 dark:text-neutral-500;
+}
+
+.text-input-error {
+
+	@apply mt-2 text-sm text-red-600;
+}
+
+.text-input-success {
+
+	@apply mt-2 text-sm text-teal-600;
+}

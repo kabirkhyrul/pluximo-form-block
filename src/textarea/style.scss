@@ -1,0 +1,52 @@
+@use "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+.textarea-container {
+
+	@apply space-y-4;
+}
+
+.textarea-field-wrapper {
+
+	@apply space-y-2;
+}
+
+.textarea-label {
+
+	@apply block mb-2 text-sm font-medium dark:text-white;
+}
+
+.textarea-required {
+
+	@apply ml-1 text-red-500;
+}
+
+.textarea-relative {
+
+	@apply relative;
+}
+
+.textarea-field {
+
+	@apply py-2.5 sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600 resize-y;
+}
+
+.textarea-icon {
+
+	@apply absolute top-3 flex items-center pointer-events-none end-0 pe-3;
+}
+
+.textarea-help {
+
+	@apply mt-2 text-sm text-gray-500 dark:text-neutral-500;
+}
+
+.textarea-error {
+
+	@apply mt-2 text-sm text-red-600;
+}
+
+.textarea-success {
+
+	@apply mt-2 text-sm text-teal-600;
+}

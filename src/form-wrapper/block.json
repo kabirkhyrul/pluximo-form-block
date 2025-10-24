@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "pluximo-form-block/wrapper",
+	"version": "1.0.0",
+	"title": "Form Wrapper",
+	"category": "widgets",
+	"icon": "feedback",
+	"description": "Form builder parent component wrapper.",
+	"example": {},
+	"attributes": {
+		"formId": {
+			"type": "string",
+			"default": ""
+		},
+		"successMessage": {
+			"type": "string",
+			"default": "Form submitted successfully."
+		},
+		"errorMessage": {
+			"type": "string",
+			"default": "We couldn't submit your form. Please try again or contact support."
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "pluximo-form-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

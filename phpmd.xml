@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<ruleset name="Pluximo Form Blocks PHPMD Rules"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+    <description>PHPMD rules for Pluximo Form Blocks WordPress plugin - focusing on actual code quality</description>
+
+    <!-- Code Size Rules - Critical for maintainability -->
+    <rule ref="rulesets/codesize.xml/CyclomaticComplexity">
+        <properties>
+            <property name="reportLevel" value="12"/>
+        </properties>
+    </rule>
+    
+    <rule ref="rulesets/codesize.xml/NPathComplexity">
+        <properties>
+            <property name="minimum" value="250"/>
+        </properties>
+    </rule>
+    
+    <rule ref="rulesets/codesize.xml/ExcessiveClassComplexity">
+        <properties>
+            <property name="maximum" value="60"/>
+        </properties>
+    </rule>
+    
+    <rule ref="rulesets/codesize.xml/ExcessiveMethodLength">
+        <properties>
+            <property name="minimum" value="120"/>
+        </properties>
+    </rule>
+
+    <!-- Design Rules - Important for clean code -->
+    <rule ref="rulesets/design.xml/EvalExpression"/>
+    <rule ref="rulesets/design.xml/GotoStatement"/>
+    <rule ref="rulesets/design.xml/NumberOfChildren">
+        <properties>
+            <property name="maximum" value="20"/>
+        </properties>
+    </rule>
+    <rule ref="rulesets/design.xml/DepthOfInheritance">
+        <properties>
+            <property name="maximum" value="8"/>
+        </properties>
+    </rule>
+    <rule ref="rulesets/design.xml/CouplingBetweenObjects">
+        <properties>
+            <property name="maximum" value="20"/>
+        </properties>
+    </rule>
+
+    <!-- Clean Code Rules - Focus on actual issues -->
+    <rule ref="rulesets/cleancode.xml/StaticAccess"/>
+    <rule ref="rulesets/cleancode.xml/DuplicatedArrayKey"/>
+    <rule ref="rulesets/cleancode.xml/UndefinedVariable"/>
+
+    <!-- Unused Code Rules - Always important -->
+    <!-- Exclude UnusedPrivateField as it reports false positives for dependency injection -->
+    <rule ref="rulesets/unusedcode.xml">
+        <exclude name="UnusedPrivateField"/>
+    </rule>
+</ruleset>

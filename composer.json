@@ -1,0 +1,22 @@
+{
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^3.2",
+		"phpmd/phpmd": "^2.15"
+	},
+	"scripts": {
+		"lint": "vendor/bin/phpcs --standard=phpcs.xml",
+		"fix": "vendor/bin/phpcbf --standard=phpcs.xml",
+		"phpmd": "vendor/bin/phpmd includes/ text phpmd.xml",
+		"phpmd-xml": "vendor/bin/phpmd includes/ xml phpmd.xml --reportfile=phpmd-report.xml",
+		"phpmd-html": "vendor/bin/phpmd includes/ html phpmd.xml --reportfile=phpmd-report.html",
+		"quality": [
+			"@lint",
+			"@phpmd"
+		]
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}
