@@ -18,13 +18,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 function pluximo_form_block_autoload( $class_name ) {
 	// Only autoload our plugin classes.
-	if ( strpos( $class_name, 'Pluximo_Form_Block_' ) !== 0 ) {
+	if ( strpos( $class_name, 'Pluximo_Form_Blocks_' ) !== 0 ) {
 		return;
 	}
 
 	// Convert class name to file name
-	// Pluximo_Form_Block_Post_Type -> class-pluximo-form-blocks-post-type.php.
-	$class_file = str_replace( 'Pluximo_Form_Block_', '', $class_name );
+	// Pluximo_Form_Blocks_Post_Type -> class-pluximo-form-blocks-post-type.php.
+	$class_file = str_replace( 'Pluximo_Form_Blocks_', '', $class_name );
 	$class_file = str_replace( '_', '-', $class_file );
 	$class_file = strtolower( $class_file );
 	$file_name  = 'class-pluximo-form-blocks-' . $class_file . '.php';
