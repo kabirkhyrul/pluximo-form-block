@@ -35,7 +35,7 @@ if ( ! defined( 'PLUXIMO_FORM_BLOCK_BLOCKS_MANIFEST' ) ) {
 
 // REST API.
 if ( ! defined( 'PLUXIMO_FORM_BLOCK_REST_NAMESPACE' ) ) {
-	define( 'PLUXIMO_FORM_BLOCK_REST_NAMESPACE', 'pluximo-form-block/v1' );
+	define( 'PLUXIMO_FORM_BLOCK_REST_NAMESPACE', 'pluximo-form-blocks/v1' );
 }
 
 // Database.

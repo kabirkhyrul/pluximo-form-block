@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "pluximo-form-block/wrapper",
+	"name": "pluximo-form-blocks/wrapper",
 	"version": "1.0.0",
 	"title": "Form Wrapper",
 	"category": "widgets",
@@ -25,7 +25,7 @@
 	"supports": {
 		"html": false
 	},
-	"textdomain": "pluximo-form-block",
+	"textdomain": "pluximo-form-blocks",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",

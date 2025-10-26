@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		const apiUrl = window.pluximoFormsAjax
 			? window.pluximoFormsAjax.apiUrl
 			: (window.wpApiSettings?.root || '/wp-json/') +
-			'pluximo-form-block/v1/submit';
+			'pluximo-form-blocks/v1/submit';
 		const nonce = window.pluximoFormsAjax
 			? window.pluximoFormsAjax.nonce
 			: '';

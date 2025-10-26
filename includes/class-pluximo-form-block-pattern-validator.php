@@ -34,12 +34,12 @@ class Pluximo_Form_Block_Pattern_Validator {
 
 		$pattern = $this->sanitize_regex_pattern( $config['pattern'] );
 		if ( ! $pattern ) {
-			return __( 'Invalid validation pattern.', 'pluximo-form-block' );
+			return __( 'Invalid validation pattern.', 'pluximo-form-blocks' );
 		}
 
 		// Validate against pattern with error handling.
 		if ( ! $this->is_pattern_match( $value, $pattern ) ) {
-			return $config['invalidMessage'] ?? __( 'Please enter a valid value.', 'pluximo-form-block' );
+			return $config['invalidMessage'] ?? __( 'Please enter a valid value.', 'pluximo-form-blocks' );
 		}
 
 		return null;

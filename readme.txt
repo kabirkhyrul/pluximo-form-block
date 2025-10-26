@@ -114,7 +114,7 @@ Stop struggling with complex form plugins. Build professional forms directly in 
 * **Developer Friendly** - Clean code following WordPress standards
 
 **Source Code & Development**
-* GitHub Repository: https://github.com/kabirkhyrul/pluximo-form-block
+* GitHub Repository: https://github.com/kabirkhyrul/pluximo-form-blocks
 * Build from source with npm/bun and webpack
 * Contributions welcome!
 
@@ -127,7 +127,7 @@ Stop struggling with complex form plugins. Build professional forms directly in 
 
 **Manual Installation:**
 1. Download the plugin zip file
-2. Upload to `/wp-content/plugins/pluximo-form-block/`
+2. Upload to `/wp-content/plugins/pluximo-form-blocks/`
 3. Activate through the Plugins screen
 
 **Quick Start:**

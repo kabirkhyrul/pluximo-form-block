@@ -8,7 +8,7 @@
  * Author:            Pluximo
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       pluximo-form-block
+ * Text Domain:       pluximo-form-blocks
  *
  * @package PluximoFormBlock
  */
@@ -53,7 +53,7 @@ function pluximo_form_block_version_notice() {
 	$class   = 'notice notice-error';
 	$message = sprintf(
 		/* translators: %s: minimum required WordPress version */
-		__( 'Pluximo Form Blocks requires WordPress %s or higher.', 'pluximo-form-block' ),
+		__( 'Pluximo Form Blocks requires WordPress %s or higher.', 'pluximo-form-blocks' ),
 		'6.7'
 	);
 	printf( '<div class="%1$s"><p>%2$s</p></div>', esc_attr( $class ), esc_html( $message ) );

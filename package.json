@@ -1,5 +1,5 @@
 {
-	"name": "pluximo-form-block",
+	"name": "pluximo-form-blocks",
 	"version": "1.0.0",
 	"description": "A dynamic block for creating and managing forms with advanced field types and validation",
 	"author": "Pluximo",
@@ -9,7 +9,7 @@
 		"build",
 		"includes",
 		"languages",
-		"pluximo-form-block.php",
+		"pluximo-form-blocks.php",
 		"readme.txt",
 		"constants.php",
 		"autoloader.php"

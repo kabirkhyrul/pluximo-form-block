@@ -99,7 +99,7 @@ export const FieldStructure = ( {
 							className="textarea-required"
 							aria-label={ __(
 								'required',
-								'pluximo-form-block'
+								'pluximo-form-blocks'
 							) }
 						>
 							*

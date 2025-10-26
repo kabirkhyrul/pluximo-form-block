@@ -15,48 +15,48 @@ export const FormWrapperInspectorControls = ( {
 	return (
 		<InspectorControls>
 			<PanelBody
-				title={ __( 'Form Settings', 'pluximo-form-block' ) }
+				title={ __( 'Form Settings', 'pluximo-form-blocks' ) }
 				initialOpen={ true }
 			>
 				<TextControl
-					label={ __( 'Form ID', 'pluximo-form-block' ) }
+					label={ __( 'Form ID', 'pluximo-form-blocks' ) }
 					value={ formId }
 					onChange={ ( value ) => setAttributes( { formId: value } ) }
 					help={ __(
 						'Unique identifier for this form (optional)',
-						'pluximo-form-block'
+						'pluximo-form-blocks'
 					) }
 					placeholder={ __(
 						'e.g., contact-form',
-						'pluximo-form-block'
+						'pluximo-form-blocks'
 					) }
 				/>
 			</PanelBody>
 			<PanelBody
-				title={ __( 'Form Messages', 'pluximo-form-block' ) }
+				title={ __( 'Form Messages', 'pluximo-form-blocks' ) }
 				initialOpen={ false }
 			>
 				<TextareaControl
-					label={ __( 'Success Message', 'pluximo-form-block' ) }
+					label={ __( 'Success Message', 'pluximo-form-blocks' ) }
 					value={ successMessage }
 					onChange={ ( value ) =>
 						setAttributes( { successMessage: value } )
 					}
 					help={ __(
 						'Message displayed when form is successfully submitted',
-						'pluximo-form-block'
+						'pluximo-form-blocks'
 					) }
 					rows={ 3 }
 				/>
 				<TextareaControl
-					label={ __( 'Error Message', 'pluximo-form-block' ) }
+					label={ __( 'Error Message', 'pluximo-form-blocks' ) }
 					value={ errorMessage }
 					onChange={ ( value ) =>
 						setAttributes( { errorMessage: value } )
 					}
 					help={ __(
 						'Message displayed when form submission fails',
-						'pluximo-form-block'
+						'pluximo-form-blocks'
 					) }
 					rows={ 3 }
 				/>

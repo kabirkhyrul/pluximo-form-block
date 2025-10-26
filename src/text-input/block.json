@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "pluximo-form-block/text-input",
+	"name": "pluximo-form-blocks/text-input",
 	"version": "1.0.0",
 	"title": "Text Input",
 	"category": "widgets",
@@ -68,7 +68,7 @@
 		}
 	},
 	"parent": [
-		"pluximo-form-block/wrapper"
+		"pluximo-form-blocks/wrapper"
 	],
 	"supports": {
 		"html": false,
@@ -80,7 +80,7 @@
 			"padding": true
 		}
 	},
-	"textdomain": "pluximo-form-block",
+	"textdomain": "pluximo-form-blocks",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",

@@ -41,27 +41,27 @@ class Pluximo_Form_Block_Post_Type {
 	 */
 	public function register_post_type() {
 		$args = array(
-			'label'              => __( 'Form Entries', 'pluximo-form-block' ),
+			'label'              => __( 'Form Entries', 'pluximo-form-blocks' ),
 			'labels'             => array(
-				'name'                  => __( 'Form Entries', 'pluximo-form-block' ),
-				'singular_name'         => __( 'Form Entry', 'pluximo-form-block' ),
-				'add_new'               => __( 'Add New Entry', 'pluximo-form-block' ),
-				'add_new_item'          => __( 'Add New Form Entry', 'pluximo-form-block' ),
-				'edit_item'             => __( 'Edit Form Entry', 'pluximo-form-block' ),
-				'new_item'              => __( 'New Form Entry', 'pluximo-form-block' ),
-				'view_item'             => __( 'View Form Entry', 'pluximo-form-block' ),
-				'view_items'            => __( 'View Form Entries', 'pluximo-form-block' ),
-				'search_items'          => __( 'Search Form Entries', 'pluximo-form-block' ),
-				'not_found'             => __( 'No form entries found', 'pluximo-form-block' ),
-				'not_found_in_trash'    => __( 'No form entries found in trash', 'pluximo-form-block' ),
-				'all_items'             => __( 'All Form Entries', 'pluximo-form-block' ),
-				'archives'              => __( 'Form Entry Archives', 'pluximo-form-block' ),
-				'attributes'            => __( 'Form Entry Attributes', 'pluximo-form-block' ),
-				'insert_into_item'      => __( 'Insert into form entry', 'pluximo-form-block' ),
-				'uploaded_to_this_item' => __( 'Uploaded to this form entry', 'pluximo-form-block' ),
-				'filter_items_list'     => __( 'Filter form entries list', 'pluximo-form-block' ),
-				'items_list_navigation' => __( 'Form entries list navigation', 'pluximo-form-block' ),
-				'items_list'            => __( 'Form entries list', 'pluximo-form-block' ),
+				'name'                  => __( 'Form Entries', 'pluximo-form-blocks' ),
+				'singular_name'         => __( 'Form Entry', 'pluximo-form-blocks' ),
+				'add_new'               => __( 'Add New Entry', 'pluximo-form-blocks' ),
+				'add_new_item'          => __( 'Add New Form Entry', 'pluximo-form-blocks' ),
+				'edit_item'             => __( 'Edit Form Entry', 'pluximo-form-blocks' ),
+				'new_item'              => __( 'New Form Entry', 'pluximo-form-blocks' ),
+				'view_item'             => __( 'View Form Entry', 'pluximo-form-blocks' ),
+				'view_items'            => __( 'View Form Entries', 'pluximo-form-blocks' ),
+				'search_items'          => __( 'Search Form Entries', 'pluximo-form-blocks' ),
+				'not_found'             => __( 'No form entries found', 'pluximo-form-blocks' ),
+				'not_found_in_trash'    => __( 'No form entries found in trash', 'pluximo-form-blocks' ),
+				'all_items'             => __( 'All Form Entries', 'pluximo-form-blocks' ),
+				'archives'              => __( 'Form Entry Archives', 'pluximo-form-blocks' ),
+				'attributes'            => __( 'Form Entry Attributes', 'pluximo-form-blocks' ),
+				'insert_into_item'      => __( 'Insert into form entry', 'pluximo-form-blocks' ),
+				'uploaded_to_this_item' => __( 'Uploaded to this form entry', 'pluximo-form-blocks' ),
+				'filter_items_list'     => __( 'Filter form entries list', 'pluximo-form-blocks' ),
+				'items_list_navigation' => __( 'Form entries list navigation', 'pluximo-form-blocks' ),
+				'items_list'            => __( 'Form entries list', 'pluximo-form-blocks' ),
 			),
 			'public'             => false,
 			'publicly_queryable' => false,
@@ -93,7 +93,7 @@ class Pluximo_Form_Block_Post_Type {
 	public function add_meta_boxes() {
 		add_meta_box(
 			'form_entry_details',
-			__( 'Form Entry Details', 'pluximo-form-block' ),
+			__( 'Form Entry Details', 'pluximo-form-blocks' ),
 			array( $this, 'render_meta_box' ),
 			PLUXIMO_FORM_BLOCK_POST_TYPE,
 			'normal',
@@ -122,7 +122,7 @@ class Pluximo_Form_Block_Post_Type {
 		// Form ID.
 		if ( $form_id ) {
 			$output[] = '<tr>';
-			$output[] = '<th scope="row">' . esc_html__( 'Form ID', 'pluximo-form-block' ) . '</th>';
+			$output[] = '<th scope="row">' . esc_html__( 'Form ID', 'pluximo-form-blocks' ) . '</th>';
 			$output[] = '<td>' . esc_html( $form_id ) . '</td>';
 			$output[] = '</tr>';
 		}
@@ -130,7 +130,7 @@ class Pluximo_Form_Block_Post_Type {
 		// Form Data.
 		if ( $form_data && is_array( $form_data ) ) {
 			$output[] = '<tr>';
-			$output[] = '<th scope="row">' . esc_html__( 'Form Data', 'pluximo-form-block' ) . '</th>';
+			$output[] = '<th scope="row">' . esc_html__( 'Form Data', 'pluximo-form-blocks' ) . '</th>';
 			$output[] = '<td>';
 			$output[] = '<table class="widefat striped">';
 			foreach ( $form_data as $field => $value ) {
@@ -147,7 +147,7 @@ class Pluximo_Form_Block_Post_Type {
 		// IP Address.
 		if ( $ip_address ) {
 			$output[] = '<tr>';
-			$output[] = '<th scope="row">' . esc_html__( 'IP Address', 'pluximo-form-block' ) . '</th>';
+			$output[] = '<th scope="row">' . esc_html__( 'IP Address', 'pluximo-form-blocks' ) . '</th>';
 			$output[] = '<td>' . esc_html( $ip_address ) . '</td>';
 			$output[] = '</tr>';
 		}
@@ -155,7 +155,7 @@ class Pluximo_Form_Block_Post_Type {
 		// User Agent.
 		if ( $user_agent ) {
 			$output[] = '<tr>';
-			$output[] = '<th scope="row">' . esc_html__( 'User Agent', 'pluximo-form-block' ) . '</th>';
+			$output[] = '<th scope="row">' . esc_html__( 'User Agent', 'pluximo-form-blocks' ) . '</th>';
 			$output[] = '<td><span title="' . esc_attr( $user_agent ) . '">' . esc_html( $this->truncate_text( $user_agent, 100 ) ) . '</span></td>';
 			$output[] = '</tr>';
 		}
@@ -163,7 +163,7 @@ class Pluximo_Form_Block_Post_Type {
 		// Referer.
 		if ( $referer ) {
 			$output[] = '<tr>';
-			$output[] = '<th scope="row">' . esc_html__( 'Referer', 'pluximo-form-block' ) . '</th>';
+			$output[] = '<th scope="row">' . esc_html__( 'Referer', 'pluximo-form-blocks' ) . '</th>';
 			$output[] = '<td><a href="' . esc_url( $referer ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( $referer ) . '</a></td>';
 			$output[] = '</tr>';
 		}
@@ -185,9 +185,9 @@ class Pluximo_Form_Block_Post_Type {
 		$new_columns                = array();
 		$new_columns['cb']          = $columns['cb'];
 		$new_columns['title']       = $columns['title'];
-		$new_columns['form_id']     = __( 'Form ID', 'pluximo-form-block' );
-		$new_columns['form_fields'] = __( 'Fields', 'pluximo-form-block' );
-		$new_columns['ip_address']  = __( 'IP Address', 'pluximo-form-block' );
+		$new_columns['form_id']     = __( 'Form ID', 'pluximo-form-blocks' );
+		$new_columns['form_fields'] = __( 'Fields', 'pluximo-form-blocks' );
+		$new_columns['ip_address']  = __( 'IP Address', 'pluximo-form-blocks' );
 		$new_columns['date']        = $columns['date'];
 
 		return $new_columns;
@@ -212,7 +212,7 @@ class Pluximo_Form_Block_Post_Type {
 					$field_count = count( $form_data );
 					$field_names = array_keys( $form_data );
 					/* translators: %d: number of fields */
-					$field_text = _n( '%d field', '%d fields', $field_count, 'pluximo-form-block' );
+					$field_text = _n( '%d field', '%d fields', $field_count, 'pluximo-form-blocks' );
 					printf(
 						esc_html( $field_text ),
 						esc_html( number_format_i18n( $field_count ) )

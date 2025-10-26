@@ -22,9 +22,9 @@ export const FormStructure = ( {
 			aria-describedby="form-submit-description"
 		>
 			<Send className="form-wrapper-icon" aria-hidden="true" />
-			{ __( 'Send', 'pluximo-form-block' ) }
+			{ __( 'Send', 'pluximo-form-blocks' ) }
 			<span id="form-submit-description" className="sr-only">
-				{ __( 'Submit the form', 'pluximo-form-block' ) }
+				{ __( 'Submit the form', 'pluximo-form-blocks' ) }
 			</span>
 		</button>
 	);
@@ -35,13 +35,13 @@ export const FormStructure = ( {
 			className={ `form-wrapper-loader ${ ! isEditor ? 'hidden' : '' }` }
 			disabled
 			aria-live="assertive"
-			aria-label={ __( 'Form is being submitted', 'pluximo-form-block' ) }
+			aria-label={ __( 'Form is being submitted', 'pluximo-form-blocks' ) }
 		>
 			<Loader
 				className="form-wrapper-icon animate-spin"
 				aria-hidden="true"
 			/>
-			{ __( 'Sending…', 'pluximo-form-block' ) }
+			{ __( 'Sending…', 'pluximo-form-blocks' ) }
 		</button>
 	);
 
@@ -57,7 +57,7 @@ export const FormStructure = ( {
 				id="success-message"
 			>
 				<span id="fbb-soft-color-success-label" className="font-bold">
-					{ __( 'Success!', 'pluximo-form-block' ) }
+					{ __( 'Success!', 'pluximo-form-blocks' ) }
 				</span>{ ' ' }
 				<span id="success-text">{ successMessage }</span>
 			</div>
@@ -71,7 +71,7 @@ export const FormStructure = ( {
 				id="error-message"
 			>
 				<span id="fbb-soft-color-danger-label" className="font-bold">
-					{ __( 'Error!', 'pluximo-form-block' ) }
+					{ __( 'Error!', 'pluximo-form-blocks' ) }
 				</span>{ ' ' }
 				<span id="error-text">{ errorMessage }</span>
 			</div>
@@ -83,7 +83,7 @@ export const FormStructure = ( {
 			className="fbb"
 			data-success-message={ successMessage }
 			data-error-message={ errorMessage }
-			aria-label={ __( 'Contact Form', 'pluximo-form-block' ) }
+			aria-label={ __( 'Contact Form', 'pluximo-form-blocks' ) }
 		>
 			<div className="form-wrapper-container">
 				<div className="form-wrapper-inner">
@@ -95,7 +95,7 @@ export const FormStructure = ( {
 					>
 						<fieldset className="form-fieldset">
 							<legend className="sr-only">
-								{ __( 'Form Fields', 'pluximo-form-block' ) }
+								{ __( 'Form Fields', 'pluximo-form-blocks' ) }
 							</legend>
 							<div className="form-wrapper-grid">
 								{ children }

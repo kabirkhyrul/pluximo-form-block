@@ -105,7 +105,7 @@ class Pluximo_Form_Block_Handler {
 					'success'        => false,
 					'message'        => sprintf(
 						/* translators: %d: number of minutes until next submission allowed */
-						__( 'Too many submissions. Please wait %d minutes before submitting again.', 'pluximo-form-block' ),
+						__( 'Too many submissions. Please wait %d minutes before submitting again.', 'pluximo-form-blocks' ),
 						$minutes
 					),
 					'throttled'      => true,
@@ -123,7 +123,7 @@ class Pluximo_Form_Block_Handler {
 			return new WP_REST_Response(
 				array(
 					'success' => false,
-					'message' => __( 'Please correct the errors below.', 'pluximo-form-block' ),
+					'message' => __( 'Please correct the errors below.', 'pluximo-form-blocks' ),
 					'errors'  => $validation_result->get_error_data(),
 				),
 				400
@@ -143,7 +143,7 @@ class Pluximo_Form_Block_Handler {
 			return new WP_REST_Response(
 				array(
 					'success' => true,
-					'message' => $success_message ?? __( 'Form submitted successfully.', 'pluximo-form-block' ),
+					'message' => $success_message ?? __( 'Form submitted successfully.', 'pluximo-form-blocks' ),
 					'data'    => $result['data'],
 				),
 				200
@@ -152,7 +152,7 @@ class Pluximo_Form_Block_Handler {
 			return new WP_REST_Response(
 				array(
 					'success' => false,
-					'message' => $error_message ?? __( 'Form submission failed. Please try again.', 'pluximo-form-block' ),
+					'message' => $error_message ?? __( 'Form submission failed. Please try again.', 'pluximo-form-blocks' ),
 					'error'   => $result['error'],
 				),
 				500
@@ -255,7 +255,7 @@ class Pluximo_Form_Block_Handler {
 
 			return array(
 				'success' => false,
-				'error'   => __( 'An error occurred while processing your submission.', 'pluximo-form-block' ),
+				'error'   => __( 'An error occurred while processing your submission.', 'pluximo-form-blocks' ),
 			);
 		}
 	}
@@ -462,24 +462,24 @@ class Pluximo_Form_Block_Handler {
 	 * Enqueue form scripts
 	 */
 	public function enqueue_form_scripts() {
-		if ( has_block( 'pluximo-form-block/wrapper' ) ) {
+		if ( has_block( 'pluximo-form-blocks/wrapper' ) ) {
 			wp_localize_script(
-				'pluximo-form-block-wrapper-view-script',
+				'pluximo-form-blocks-wrapper-view-script',
 				'pluximoFormsAjax',
 				array(
 					'apiUrl'   => rest_url( PLUXIMO_FORM_BLOCK_REST_NAMESPACE . '/submit' ),
 					'nonce'    => wp_create_nonce( 'wp_rest' ),
 					'messages' => array(
-						'required'  => __( 'This field is required.', 'pluximo-form-block' ),
+						'required'  => __( 'This field is required.', 'pluximo-form-blocks' ),
 						/* translators: %d: minimum number of characters required */
-						'minLength' => __( 'Please enter at least %d characters.', 'pluximo-form-block' ),
+						'minLength' => __( 'Please enter at least %d characters.', 'pluximo-form-blocks' ),
 						/* translators: %d: maximum number of characters allowed */
-						'maxLength' => __( 'Please enter no more than %d characters.', 'pluximo-form-block' ),
-						'pattern'   => __( 'Please enter a valid value.', 'pluximo-form-block' ),
-						'email'     => __( 'Please enter a valid email address (e.g., user@example.com).', 'pluximo-form-block' ),
-						'url'       => __( 'Please enter a valid URL (e.g., https://example.com).', 'pluximo-form-block' ),
-						'tel'       => __( 'Please enter a valid phone number (e.g., +1-234-567-8900).', 'pluximo-form-block' ),
-						'default'   => __( 'Please enter a valid value.', 'pluximo-form-block' ),
+						'maxLength' => __( 'Please enter no more than %d characters.', 'pluximo-form-blocks' ),
+						'pattern'   => __( 'Please enter a valid value.', 'pluximo-form-blocks' ),
+						'email'     => __( 'Please enter a valid email address (e.g., user@example.com).', 'pluximo-form-blocks' ),
+						'url'       => __( 'Please enter a valid URL (e.g., https://example.com).', 'pluximo-form-blocks' ),
+						'tel'       => __( 'Please enter a valid phone number (e.g., +1-234-567-8900).', 'pluximo-form-blocks' ),
+						'default'   => __( 'Please enter a valid value.', 'pluximo-form-blocks' ),
 					),
 				)
 			);

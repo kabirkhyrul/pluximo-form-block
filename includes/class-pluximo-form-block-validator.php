@@ -90,7 +90,7 @@ class Pluximo_Form_Block_Validator {
 		if ( ! empty( $field_errors ) ) {
 			return new WP_Error(
 				'validation_failed',
-				__( 'Form validation failed.', 'pluximo-form-block' ),
+				__( 'Form validation failed.', 'pluximo-form-blocks' ),
 				$field_errors
 			);
 		}
@@ -115,7 +115,7 @@ class Pluximo_Form_Block_Validator {
 		if ( ! is_array( $form_data ) ) {
 			return new WP_Error(
 				'invalid_form_data',
-				__( 'Form data must be an array.', 'pluximo-form-block' )
+				__( 'Form data must be an array.', 'pluximo-form-blocks' )
 			);
 		}
 
@@ -123,7 +123,7 @@ class Pluximo_Form_Block_Validator {
 		if ( empty( $form_data ) ) {
 			return new WP_Error(
 				'empty_form_data',
-				__( 'Form data cannot be empty.', 'pluximo-form-block' )
+				__( 'Form data cannot be empty.', 'pluximo-form-blocks' )
 			);
 		}
 
@@ -133,7 +133,7 @@ class Pluximo_Form_Block_Validator {
 				'too_many_fields',
 				sprintf(
 					/* translators: %d: maximum number of fields allowed */
-					__( 'Too many form fields. Maximum %d fields allowed.', 'pluximo-form-block' ),
+					__( 'Too many form fields. Maximum %d fields allowed.', 'pluximo-form-blocks' ),
 					$this->max_fields
 				)
 			);
@@ -154,7 +154,7 @@ class Pluximo_Form_Block_Validator {
 		foreach ( $form_data as $field_id => $value ) {
 			// Validate field ID.
 			if ( ! $this->is_valid_field_id( $field_id ) ) {
-				$errors[ $field_id ] = __( 'Invalid field identifier.', 'pluximo-form-block' );
+				$errors[ $field_id ] = __( 'Invalid field identifier.', 'pluximo-form-blocks' );
 				continue;
 			}
 
@@ -191,14 +191,14 @@ class Pluximo_Form_Block_Validator {
 	private function validate_field( $field_id, $value ) {
 		// Value must be string.
 		if ( ! is_string( $value ) ) {
-			return __( 'Field value must be text.', 'pluximo-form-block' );
+			return __( 'Field value must be text.', 'pluximo-form-blocks' );
 		}
 
 		// Check maximum length to prevent memory attacks.
 		if ( strlen( $value ) > $this->max_field_length ) {
 			return sprintf(
 				/* translators: %d: maximum allowed length */
-				__( 'Field value too long. Maximum %d characters allowed.', 'pluximo-form-block' ),
+				__( 'Field value too long. Maximum %d characters allowed.', 'pluximo-form-blocks' ),
 				$this->max_field_length
 			);
 		}
@@ -222,7 +222,7 @@ class Pluximo_Form_Block_Validator {
 
 		// Required field validation.
 		if ( ! empty( $config['required'] ) && empty( $value ) ) {
-			return __( 'This field is required.', 'pluximo-form-block' );
+			return __( 'This field is required.', 'pluximo-form-blocks' );
 		}
 
 		// Skip other validations if field is empty and not required.
@@ -259,7 +259,7 @@ class Pluximo_Form_Block_Validator {
 		if ( isset( $config['minLength'] ) && $length < intval( $config['minLength'] ) ) {
 			return sprintf(
 				/* translators: %d: minimum length required */
-				__( 'Please enter at least %d characters.', 'pluximo-form-block' ),
+				__( 'Please enter at least %d characters.', 'pluximo-form-blocks' ),
 				intval( $config['minLength'] )
 			);
 		}
@@ -267,7 +267,7 @@ class Pluximo_Form_Block_Validator {
 		if ( isset( $config['maxLength'] ) && $length > intval( $config['maxLength'] ) ) {
 			return sprintf(
 				/* translators: %d: maximum length allowed */
-				__( 'Please enter no more than %d characters.', 'pluximo-form-block' ),
+				__( 'Please enter no more than %d characters.', 'pluximo-form-blocks' ),
 				intval( $config['maxLength'] )
 			);
 		}

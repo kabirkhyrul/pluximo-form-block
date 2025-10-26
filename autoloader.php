@@ -23,11 +23,11 @@ function pluximo_form_block_autoload( $class_name ) {
 	}
 
 	// Convert class name to file name
-	// Pluximo_Form_Block_Post_Type -> class-pluximo-form-block-post-type.php.
+	// Pluximo_Form_Block_Post_Type -> class-pluximo-form-blocks-post-type.php.
 	$class_file = str_replace( 'Pluximo_Form_Block_', '', $class_name );
 	$class_file = str_replace( '_', '-', $class_file );
 	$class_file = strtolower( $class_file );
-	$file_name  = 'class-pluximo-form-block-' . $class_file . '.php';
+	$file_name  = 'class-pluximo-form-blocks-' . $class_file . '.php';
 
 	// Define possible paths where classes might be located.
 	$possible_paths = array(

@@ -57,12 +57,12 @@ class Pluximo_Form_Block_Field_Type_Validator {
 	 */
 	private function validate_email_field( $value ) {
 		if ( ! is_email( $value ) ) {
-			return __( 'Please enter a valid email address.', 'pluximo-form-block' );
+			return __( 'Please enter a valid email address.', 'pluximo-form-blocks' );
 		}
 
 		// Additional email security check.
 		if ( strlen( $value ) > 254 ) { // RFC 5321 limit.
-			return __( 'Email address is too long.', 'pluximo-form-block' );
+			return __( 'Email address is too long.', 'pluximo-form-blocks' );
 		}
 
 		return null;
@@ -76,12 +76,12 @@ class Pluximo_Form_Block_Field_Type_Validator {
 	 */
 	private function validate_url_field( $value ) {
 		if ( ! filter_var( $value, FILTER_VALIDATE_URL ) ) {
-			return __( 'Please enter a valid URL.', 'pluximo-form-block' );
+			return __( 'Please enter a valid URL.', 'pluximo-form-blocks' );
 		}
 
 		// Security check for URL length.
 		if ( strlen( $value ) > 2048 ) {
-			return __( 'URL is too long.', 'pluximo-form-block' );
+			return __( 'URL is too long.', 'pluximo-form-blocks' );
 		}
 
 		// Basic protocol check.
@@ -89,7 +89,7 @@ class Pluximo_Form_Block_Field_Type_Validator {
 		$protocol          = wp_parse_url( $value, PHP_URL_SCHEME );
 
 		if ( $protocol && ! in_array( $protocol, $allowed_protocols, true ) ) {
-			return __( 'URL protocol not allowed.', 'pluximo-form-block' );
+			return __( 'URL protocol not allowed.', 'pluximo-form-blocks' );
 		}
 
 		return null;
@@ -107,17 +107,17 @@ class Pluximo_Form_Block_Field_Type_Validator {
 
 		// Basic phone validation.
 		if ( ! preg_match( '/^[\+]?[0-9\s\-\(\)]+$/', $value ) ) {
-			return __( 'Please enter a valid phone number.', 'pluximo-form-block' );
+			return __( 'Please enter a valid phone number.', 'pluximo-form-blocks' );
 		}
 
 		// Check minimum digits.
 		if ( strlen( $clean_number ) < 7 ) {
-			return __( 'Phone number is too short.', 'pluximo-form-block' );
+			return __( 'Phone number is too short.', 'pluximo-form-blocks' );
 		}
 
 		// Check maximum length.
 		if ( strlen( $value ) > 20 ) {
-			return __( 'Phone number is too long.', 'pluximo-form-block' );
+			return __( 'Phone number is too long.', 'pluximo-form-blocks' );
 		}
 
 		return null;
@@ -137,7 +137,7 @@ class Pluximo_Form_Block_Field_Type_Validator {
 		if ( $line_count > $max_lines ) {
 			return sprintf(
 				/* translators: %d: maximum number of lines allowed */
-				__( 'Too many lines. Maximum %d lines allowed.', 'pluximo-form-block' ),
+				__( 'Too many lines. Maximum %d lines allowed.', 'pluximo-form-blocks' ),
 				$max_lines
 			);
 		}

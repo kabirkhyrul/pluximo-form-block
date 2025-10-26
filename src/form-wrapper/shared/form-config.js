@@ -5,7 +5,7 @@
 
 export const DEFAULT_CONTACT_FORM_TEMPLATE = [
 	[
-		'pluximo-form-block/text-input',
+		'pluximo-form-blocks/text-input',
 		{
 			label: 'Name',
 			placeholder: 'Your full name',
@@ -14,7 +14,7 @@ export const DEFAULT_CONTACT_FORM_TEMPLATE = [
 		},
 	],
 	[
-		'pluximo-form-block/text-input',
+		'pluximo-form-blocks/text-input',
 		{
 			label: 'Email',
 			placeholder: 'your@email.com',
@@ -23,7 +23,7 @@ export const DEFAULT_CONTACT_FORM_TEMPLATE = [
 		},
 	],
 	[
-		'pluximo-form-block/text-input',
+		'pluximo-form-blocks/text-input',
 		{
 			label: 'Subject',
 			placeholder: 'Message subject',
@@ -32,7 +32,7 @@ export const DEFAULT_CONTACT_FORM_TEMPLATE = [
 		},
 	],
 	[
-		'pluximo-form-block/textarea',
+		'pluximo-form-blocks/textarea',
 		{
 			label: 'Message',
 			placeholder: 'Your message here...',
@@ -45,8 +45,8 @@ export const DEFAULT_CONTACT_FORM_TEMPLATE = [
 
 export const FORM_BLOCK_CONFIG = {
 	allowedBlocks: [
-		'pluximo-form-block/text-input',
-		'pluximo-form-block/textarea',
+		'pluximo-form-blocks/text-input',
+		'pluximo-form-blocks/textarea',
 	],
 	templateLock: false,
 };
@@ -56,7 +56,7 @@ export const TEMPLATES = {
 	contact: DEFAULT_CONTACT_FORM_TEMPLATE,
 	newsletter: [
 		[
-			'pluximo-form-block/text-input',
+			'pluximo-form-blocks/text-input',
 			{
 				label: 'Email',
 				placeholder: 'Enter your email',
@@ -67,7 +67,7 @@ export const TEMPLATES = {
 	],
 	feedback: [
 		[
-			'pluximo-form-block/text-input',
+			'pluximo-form-blocks/text-input',
 			{
 				label: 'Name',
 				placeholder: 'Your name',
@@ -76,7 +76,7 @@ export const TEMPLATES = {
 			},
 		],
 		[
-			'pluximo-form-block/text-input',
+			'pluximo-form-blocks/text-input',
 			{
 				label: 'Feedback',
 				placeholder: 'Share your thoughts...',
