@@ -7,13 +7,7 @@
 	"category": "widgets",
 	"icon": "text",
 	"description": "A textarea field for form building with validation and styling options.",
-	"keywords": [
-		"textarea",
-		"text",
-		"form",
-		"field",
-		"multiline"
-	],
+	"keywords": [ "textarea", "text", "form", "field", "multiline" ],
 	"attributes": {
 		"label": {
 			"type": "string",
@@ -68,9 +62,7 @@
 			"rows": 6
 		}
 	},
-	"parent": [
-		"pluximo-form-blocks/wrapper"
-	],
+	"parent": [ "pluximo-form-blocks/wrapper" ],
 	"supports": {
 		"html": false,
 		"anchor": true,

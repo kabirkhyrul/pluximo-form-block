@@ -7,12 +7,7 @@
 	"category": "widgets",
 	"icon": "text",
 	"description": "A text input field for form building with validation and styling options.",
-	"keywords": [
-		"input",
-		"text",
-		"form",
-		"field"
-	],
+	"keywords": [ "input", "text", "form", "field" ],
 	"attributes": {
 		"label": {
 			"type": "string",
@@ -67,9 +62,7 @@
 			"helpText": "We'll never share your details."
 		}
 	},
-	"parent": [
-		"pluximo-form-blocks/wrapper"
-	],
+	"parent": [ "pluximo-form-blocks/wrapper" ],
 	"supports": {
 		"html": false,
 		"anchor": true,

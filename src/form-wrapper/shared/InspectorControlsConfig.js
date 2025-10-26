@@ -5,6 +5,7 @@
 import { __ } from '@wordpress/i18n';
 import { InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, TextControl, TextareaControl } from '@wordpress/components';
+import { sanitizeFormId } from './form-utils';
 
 export const FormWrapperInspectorControls = ( {
 	attributes,
@@ -21,7 +22,9 @@ export const FormWrapperInspectorControls = ( {
 				<TextControl
 					label={ __( 'Form ID', 'pluximo-form-blocks' ) }
 					value={ formId }
-					onChange={ ( value ) => setAttributes( { formId: value } ) }
+					onChange={ ( value ) =>
+						setAttributes( { formId: sanitizeFormId( value ) } )
+					}
 					help={ __(
 						'Unique identifier for this form (optional)',
 						'pluximo-form-blocks'

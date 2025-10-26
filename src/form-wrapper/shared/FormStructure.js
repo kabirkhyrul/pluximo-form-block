@@ -4,6 +4,7 @@
  */
 import { __ } from '@wordpress/i18n';
 import { Send, Loader } from 'lucide-react';
+import { sanitizeFormId } from './form-utils';
 
 export const FormStructure = ( {
 	children,
@@ -15,6 +16,9 @@ export const FormStructure = ( {
 		successMessage = 'Form submitted successfully.',
 		errorMessage = "We couldn't submit your form. Please try again or contact support.",
 	} = attributes;
+
+	const sanitizedFormId = formId ? sanitizeFormId( formId ) : '';
+
 	const SubmitButton = () => (
 		<button
 			type="submit"
@@ -35,7 +39,10 @@ export const FormStructure = ( {
 			className={ `form-wrapper-loader ${ ! isEditor ? 'hidden' : '' }` }
 			disabled
 			aria-live="assertive"
-			aria-label={ __( 'Form is being submitted', 'pluximo-form-blocks' ) }
+			aria-label={ __(
+				'Form is being submitted',
+				'pluximo-form-blocks'
+			) }
 		>
 			<Loader
 				className="form-wrapper-icon animate-spin"
@@ -88,7 +95,7 @@ export const FormStructure = ( {
 			<div className="form-wrapper-container">
 				<div className="form-wrapper-inner">
 					<form
-						id={ formId || undefined }
+						id={ sanitizedFormId || undefined }
 						method="POST"
 						noValidate
 						aria-live="polite"
