@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Handles the custom post type registration for form entries.
  */
-class Pluximo_Form_Block_Post_Type {
+class Pluximo_Form_Blocks_Post_Type {
 
 	/**
 	 * Constructor.

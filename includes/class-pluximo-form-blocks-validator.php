@@ -20,26 +20,26 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Provides comprehensive server-side validation for form submissions.
  * Never trust client-side validation - always validate on the server.
  */
-class Pluximo_Form_Block_Validator {
+class Pluximo_Form_Blocks_Validator {
 
 	/**
 	 * Field type validator instance.
 	 *
-	 * @var Pluximo_Form_Block_Field_Type_Validator
+	 * @var Pluximo_Form_Blocks_Field_Type_Validator
 	 */
 	private $type_validator;
 
 	/**
 	 * Pattern validator instance.
 	 *
-	 * @var Pluximo_Form_Block_Pattern_Validator
+	 * @var Pluximo_Form_Blocks_Pattern_Validator
 	 */
 	private $pattern_validator;
 
 	/**
 	 * Field configuration manager.
 	 *
-	 * @var Pluximo_Form_Block_Field_Config
+	 * @var Pluximo_Form_Blocks_Field_Config
 	 */
 	private $field_config;
 
@@ -67,9 +67,9 @@ class Pluximo_Form_Block_Validator {
 		$this->max_field_length = apply_filters( 'pluximo_form_block_max_field_length', $this->max_field_length );
 
 		// Initialize helper classes.
-		$this->type_validator    = new Pluximo_Form_Block_Field_Type_Validator();
-		$this->pattern_validator = new Pluximo_Form_Block_Pattern_Validator();
-		$this->field_config      = new Pluximo_Form_Block_Field_Config();
+		$this->type_validator    = new Pluximo_Form_Blocks_Field_Type_Validator();
+		$this->pattern_validator = new Pluximo_Form_Blocks_Pattern_Validator();
+		$this->field_config      = new Pluximo_Form_Blocks_Field_Config();
 	}
 
 	/**

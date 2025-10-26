@@ -19,19 +19,19 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Handles form submission endpoints and processing for the Pluximo Form Blocks.
  */
-class Pluximo_Form_Block_Handler {
+class Pluximo_Form_Blocks_Handler {
 
 	/**
 	 * Form validator instance.
 	 *
-	 * @var Pluximo_Form_Block_Validator
+	 * @var Pluximo_Form_Blocks_Validator
 	 */
 	private $validator;
 
 	/**
 	 * Form throttle instance.
 	 *
-	 * @var Pluximo_Form_Block_Throttle
+	 * @var Pluximo_Form_Blocks_Throttle
 	 */
 	private $throttle;
 
@@ -39,8 +39,8 @@ class Pluximo_Form_Block_Handler {
 	 * Constructor. Hooks into REST API init and enqueue scripts actions.
 	 */
 	public function __construct() {
-		$this->validator = new Pluximo_Form_Block_Validator();
-		$this->throttle  = new Pluximo_Form_Block_Throttle();
+		$this->validator = new Pluximo_Form_Blocks_Validator();
+		$this->throttle  = new Pluximo_Form_Blocks_Throttle();
 		add_action( 'rest_api_init', array( $this, 'register_routes' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_form_scripts' ) );
 	}

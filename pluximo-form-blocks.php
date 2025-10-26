@@ -38,11 +38,11 @@ function pluximo_form_block_init_plugin() {
 	}
 
 	// Initialize post type and handlers.
-	if ( class_exists( 'Pluximo_Form_Block_Post_Type' ) ) {
-		new Pluximo_Form_Block_Post_Type();
+	if ( class_exists( 'Pluximo_Form_Blocks_Post_Type' ) ) {
+		new Pluximo_Form_Blocks_Post_Type();
 	}
-	if ( class_exists( 'Pluximo_Form_Block_Handler' ) ) {
-		new Pluximo_Form_Block_Handler();
+	if ( class_exists( 'Pluximo_Form_Blocks_Handler' ) ) {
+		new Pluximo_Form_Blocks_Handler();
 	}
 }
 
@@ -65,8 +65,8 @@ function pluximo_form_block_version_notice() {
  */
 function pluximo_form_block_activate() {
 	// Ensure classes are loaded and post type is registered.
-	if ( class_exists( 'Pluximo_Form_Block_Post_Type' ) ) {
-		Pluximo_Form_Block_Post_Type::register();
+	if ( class_exists( 'Pluximo_Form_Blocks_Post_Type' ) ) {
+		Pluximo_Form_Blocks_Post_Type::register();
 	}
 	flush_rewrite_rules();
 }

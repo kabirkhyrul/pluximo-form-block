@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Manages field configuration based on field IDs and patterns.
  */
-class Pluximo_Form_Block_Field_Config {
+class Pluximo_Form_Blocks_Field_Config {
 
 	/**
 	 * Get field configuration for validation.

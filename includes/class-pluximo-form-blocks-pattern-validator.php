@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Handles regex pattern validation with security safeguards.
  */
-class Pluximo_Form_Block_Pattern_Validator {
+class Pluximo_Form_Blocks_Pattern_Validator {
 
 	/**
 	 * Validate field pattern constraints.

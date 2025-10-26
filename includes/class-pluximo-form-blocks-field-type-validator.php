@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Handles validation for specific field types like email, URL, telephone, etc.
  */
-class Pluximo_Form_Block_Field_Type_Validator {
+class Pluximo_Form_Blocks_Field_Type_Validator {
 
 	/**
 	 * Validate field based on type.

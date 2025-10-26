@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * Provides IP-based rate limiting for form submissions.
  */
-class Pluximo_Form_Block_Throttle {
+class Pluximo_Form_Blocks_Throttle {
 
 	/**
 	 * Transient key prefix for throttling data.
